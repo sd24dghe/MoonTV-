@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  moontv:
+    image: ghcr.io/sd24dghe/moontv-backup:stable
+    container_name: moontv
+    ports:
+      - "8080:3000" 
+    restart: unless-stopped
+    
+    # environment:
+    #   - TZ=Asia/Shanghai
+    # 数据持久化
+    # volumes:
+    #   - ./data:/app/data
